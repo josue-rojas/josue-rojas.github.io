@@ -1,4 +1,4 @@
-# josuerojasrojas.github.io
+# josue-rojas.github.io
 My portfolio page were were I show about me and some projects I have done.
 
 ### Built With
@@ -7,8 +7,8 @@ React.js and Sass
 ### Installing / Getting started
 
 ```bash
-git clone git@github.com:josuerojasrojas/josuerojasrojas.github.io.git
-cd josuerojasrojas.github.io
+git clone git@github.com:josue-rojas/josue-rojas.github.io.git
+cd josue-rojas.github.io
 npm install
 ```
 

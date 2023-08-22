@@ -46,12 +46,12 @@ class App extends Component {
         return <ProjectsPage />;
       case "#random":
         const random_links = [
-          "http://josuerojasrojas.github.io/Stars-React/#300",
-          "http://josuerojasrojas.github.io/fav-quotes/",
+          "http://josue-rojas.github.io/Stars-React/#300",
+          "http://josue-rojas.github.io/fav-quotes/",
           "https://calendarttp.herokuapp.com/",
           "https://github.com/josuerojasrojas/ebay-notifier",
           "https://unkown-timers.herokuapp.com/",
-          "https://josuerojasrojas.github.io/react-loading/",
+          "https://josue-rojas.github.io/react-loading/",
           "https://publicsuggestions.herokuapp.com/",
           "https://sites.google.com/site/josuerojasportfolio/python/migration-of-language-and-income",
         ];
