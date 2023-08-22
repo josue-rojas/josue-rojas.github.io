@@ -46,14 +46,18 @@ class App extends Component {
         return <ProjectsPage />;
       case "#random":
         const random_links = [
-          "http://josue-rojas.github.io/Stars-React/#300",
           "http://josue-rojas.github.io/fav-quotes/",
-          "https://calendarttp.herokuapp.com/",
+          "http://josue-rojas.github.io/Stars-React/#300",
+          "https://github.com/azul-rojo/survivalkits",
+          "https://github.com/josue-rojas/dots",
           "https://github.com/josue-rojas/ebay-notifier",
-          "https://unkown-timers.herokuapp.com/",
+          "https://github.com/josue-rojas/SunMoonReact",
+          "https://github.com/josue-rojas/unsent-project-clone",
           "https://josue-rojas.github.io/react-loading/",
-          "https://publicsuggestions.herokuapp.com/",
           "https://sites.google.com/site/josuerojasportfolio/python/migration-of-language-and-income",
+          // "https://calendarttp.herokuapp.com/",
+          // "https://publicsuggestions.herokuapp.com/",
+          // "https://unkown-timers.herokuapp.com/",
         ];
         window.location.hash = "#home";
         window.location =
