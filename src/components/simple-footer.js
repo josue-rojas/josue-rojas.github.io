@@ -20,7 +20,7 @@ export default class SimpleFooter extends Component {
       <footer>
         <a
           style={{ color: color }}
-          href="https://github.com/josuerojasrojas/josue-rojas.github.io"
+          href="https://github.com/josue-rojas/josue-rojas.github.io"
           onMouseEnter={() => this.toggleHover(true)}
           onMouseLeave={() => this.toggleHover(false)}
         >

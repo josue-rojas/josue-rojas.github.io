@@ -49,7 +49,7 @@ class App extends Component {
           "http://josue-rojas.github.io/Stars-React/#300",
           "http://josue-rojas.github.io/fav-quotes/",
           "https://calendarttp.herokuapp.com/",
-          "https://github.com/josuerojasrojas/ebay-notifier",
+          "https://github.com/josue-rojas/ebay-notifier",
           "https://unkown-timers.herokuapp.com/",
           "https://josue-rojas.github.io/react-loading/",
           "https://publicsuggestions.herokuapp.com/",
@@ -63,7 +63,7 @@ class App extends Component {
         return (
           <SimpleCard
             social={{
-              Github: "https://github.com/josuerojasrojas",
+              Github: "https://github.com/josue-rojas",
               LinkedIn: "https://www.linkedin.com/in/josuerojasz/",
               Twitter: "https://www.twitter.com/withcheesepls/",
               Instagram: "https://www.instagram.com/withcheesepls/",

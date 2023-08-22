@@ -9,7 +9,7 @@ this script is to get github public projects with their info.
 modidfied to only get pinned repos
 '''
 
-USERNAME_SEARCH = 'josuerojasrojas'
+USERNAME_SEARCH = 'josue-rojas'
 
 
 def getPinnedNames():
@@ -36,8 +36,8 @@ def getSearchablelanguages():
     return langs
 
 findList, ownerList = getPinnedNames() #repos to find
-basicInfo = requests.get('https://api.github.com/users/'+USERNAME_SEARCH,auth=('josuerojasrojas',os.environ['gittoken'])).json()
-# repos = requests.get('https://api.github.com/users/'+USERNAME_SEARCH+'/repos',auth=('josuerojasrojas',os.environ['gittoken'])).json()
+basicInfo = requests.get('https://api.github.com/users/'+USERNAME_SEARCH,auth=('josue-rojas',os.environ['gittoken'])).json()
+# repos = requests.get('https://api.github.com/users/'+USERNAME_SEARCH+'/repos',auth=('josue-rojas',os.environ['gittoken'])).json()
 allLanguages = getSearchablelanguages()
 
 
@@ -56,9 +56,9 @@ def getInfo():
     # info filter are just simple filter from the json data we get, if the information needs to be cleaned or modified then it is done after
     info_filter = ['name', 'html_url', 'description', 'created_at', 'homepage']
     for repo_name, repo_owner in zip(findList, ownerList):
-        repo = requests.get('https://api.github.com/repos/'+repo_owner+'/'+repo_name,auth=('josuerojasrojas',os.environ['gittoken'])).json()
+        repo = requests.get('https://api.github.com/repos/'+repo_owner+'/'+repo_name,auth=('josue-rojas',os.environ['gittoken'])).json()
         singleJson = {}
-        languagesInfo = languagePercent(requests.get(repo['languages_url'],auth=('josuerojasrojas',os.environ['gittoken'])).json()) if repo['languages_url'] else []
+        languagesInfo = languagePercent(requests.get(repo['languages_url'],auth=('josue-rojas',os.environ['gittoken'])).json()) if repo['languages_url'] else []
         singleJson['languages'] = languagesInfo
         singleJson['languagesList'] = languagesInfo.keys()
         singleJson['datevalue'] = dp.parse(repo['created_at']).strftime('%s') if repo['created_at'] else ''

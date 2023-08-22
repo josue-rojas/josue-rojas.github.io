@@ -50,7 +50,7 @@ export default class ProjectsPage extends Component {
         <a
           key={l}
           className={`language-circle ${l}`}
-          href={`https://github.com/josuerojasrojas?utf8=✓&tab=repositories&language=${l}`}
+          href={`https://github.com/josue-rojas?utf8=✓&tab=repositories&language=${l}`}
         >
           <span className="language-link-text">{l}</span>
         </a>
@@ -79,7 +79,7 @@ export default class ProjectsPage extends Component {
             icon={Github}
             main_color={main_color}
             hover_color={hover_color}
-            link={"https://github.com/josuerojasrojas"}
+            link={"https://github.com/josue-rojas"}
           />
           <div className="language-search-bar">
             {this.makeLangCircles(all_projects["languages"])}
