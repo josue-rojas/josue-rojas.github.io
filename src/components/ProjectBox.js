@@ -52,7 +52,7 @@ export default class ProjectBox extends Component {
       ""
     );
 
-    const date = new Date(this.props.date);
+    const date = this.props.date && new Date(this.props.date);
     return (
       <div
         className={"project-box " + (this.props.showing ? " showing" : "")}
@@ -65,18 +65,20 @@ export default class ProjectBox extends Component {
             {this.makeLangCircles(this.props.languages)}
           </div>
           <div className="title">{this.props.title}</div>
-          <div className="date">
-            Date Created{" "}
-            {date.getFullYear() +
-              "-" +
-              (date.getMonth() + 1 > 9
-                ? date.getMonth() + 1
-                : "0" + (date.getMonth() + 1)) +
-              "-" +
-              (date.getDate() > 9
-                ? date.getDate()
-                : "0" + (date.getDate() + 1))}
-          </div>
+          {date && 
+            <div className="date">
+              Date Created{" "}
+              {date.getFullYear() +
+                "-" +
+                (date.getMonth() + 1 > 9
+                  ? date.getMonth() + 1
+                  : "0" + (date.getMonth() + 1)) +
+                "-" +
+                (date.getDate() > 9
+                  ? date.getDate()
+                  : "0" + (date.getDate() + 1))}
+            </div>
+          }
           <div className="description">
             <p>{this.props.description}</p>
           </div>

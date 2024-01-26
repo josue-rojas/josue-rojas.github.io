@@ -1,0 +1,45 @@
+.simple-container {
+  background-color: rgba(28, 28, 28, 0.6);
+  width: 95%;
+  min-height: 100px;
+  padding: 20px;
+  margin: auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  text-align: justify; }
+  @media (min-width: 768px) {
+    .simple-container {
+      width: 80%;
+      max-height: 600px; } }
+  @media (min-width: 992px) {
+    .simple-container {
+      max-height: 500px;
+      width: 60%; } }
+  .simple-container .top-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; }
+    .simple-container .top-wrapper .title {
+      font-size: 1.25rem; }
+    .simple-container .top-wrapper .close-btn-wrapper {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      margin: 0px 3px;
+      display: inline-block; }
+      .simple-container .top-wrapper .close-btn-wrapper div {
+        position: absolute;
+        background-color: #989da1;
+        width: 5px;
+        height: 32px;
+        transition: 400ms;
+        margin-left: 13px; }
+        .simple-container .top-wrapper .close-btn-wrapper div:first-child {
+          transform: rotate(45deg); }
+        .simple-container .top-wrapper .close-btn-wrapper div:last-child {
+          transform: rotate(-45deg); }
+      .simple-container .top-wrapper .close-btn-wrapper:hover {
+        cursor: pointer; }
+        .simple-container .top-wrapper .close-btn-wrapper:hover div {
+          background-color: #05fbff; }

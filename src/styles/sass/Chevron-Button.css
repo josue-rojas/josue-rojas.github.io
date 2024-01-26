@@ -1,0 +1,21 @@
+.icon-border.chevron-down {
+  border-radius: 100%;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #989da1; }
+  .icon-border.chevron-down:hover {
+    border: 1px solid #05fbff; }
+    .icon-border.chevron-down:hover .icon {
+      background-color: #05fbff; }
+  .icon-border.chevron-down .icon {
+    width: 20px;
+    height: 32px;
+    mask: url("../../images/svg/chevron-down.svg") no-repeat 50% 50%;
+    -webkit-mask: url("../../images/svg/chevron-down.svg") no-repeat 50% 50%;
+    mask-size: cover;
+    transition: 400ms;
+    background-color: #989da1; }

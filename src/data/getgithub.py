@@ -84,7 +84,7 @@ def main():
     with open('data.json','w') as jsonfile:
         json.dump(organizeData(repoJson), jsonfile)
     os.chdir(os.getcwd())
-    print 'Done'
+    print('Done')
     # os.system('cd '+ os.getcwd()+ '; json2yaml data.json > data.yml') #it's easier to use so i've heard, plus it looks pretty
 
 main()

@@ -77,7 +77,7 @@ class App extends Component {
             main_color="#989DA1"
             profile_image="https://avatars0.githubusercontent.com/u/10749061"
             title="Josue Rojas"
-            sub_title="Software Developer / Wonderer"
+            sub_title="Software Engineer / Wonderer"
           />
         );
     }
