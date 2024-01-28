@@ -1,0 +1,13 @@
+.round-icon-border {
+  border-radius: 100%;
+  display: inline-block;
+  margin: 3px;
+  cursor: pointer;
+  transition: border 300ms; }
+  .round-icon-border .icon {
+    width: 24px;
+    height: 24px;
+    margin: 7px;
+    mask-size: cover;
+    -webkit-marsk-size: cover;
+    transition: color 400ms; }

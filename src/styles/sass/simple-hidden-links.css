@@ -1,0 +1,12 @@
+.hidden-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .hidden-links-wrapper .link-wrapper {
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+    justify-content: center;
+    transition: max-height 400ms; }

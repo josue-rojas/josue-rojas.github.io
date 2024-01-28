@@ -1,0 +1,110 @@
+.project-box {
+  user-select: none;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 40px;
+  padding-top: 5px;
+  background-color: rgba(31, 31, 31, 0.3);
+  border: 1px solid rgba(31, 31, 31, 0.8);
+  float: left;
+  width: 100%;
+  margin: 0 0 20px;
+  color: #989da1;
+  letter-spacing: .05rem;
+  transition: animation 400ms, opacity 400ms;
+  font-weight: 200;
+  position: relative;
+  cursor: pointer; }
+  .project-box.showing .information {
+    opacity: 0; }
+  .project-box.showing .show-box {
+    z-index: 2;
+    opacity: 1; }
+  .project-box.showing .icon-border.dash .icon {
+    width: 100%;
+    height: 1px; }
+  @media (min-width: 768px) {
+    .project-box {
+      text-align: center;
+      width: 47%; } }
+  @media (min-width: 768px) {
+    .project-box .languages {
+      display: flex;
+      justify-content: center; } }
+  .project-box .title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: .1rem; }
+  .project-box .date {
+    font-size: .75rem; }
+  .project-box .description {
+    font-size: .95rem;
+    margin-bottom: auto; }
+  .project-box .icon-border.dash {
+    bottom: 10px;
+    left: calc(50% - 10%);
+    position: absolute; }
+  .project-box .show-box {
+    z-index: -1;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    transition: opacity 500ms; }
+    .project-box .show-box .icon-border {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      cursor: pointer;
+      width: 56px;
+      height: 56px;
+      border: 1px solid rgba(31, 31, 31, 0.8);
+      border-left: 1px solid #05fbff;
+      border-right: 1px solid #05fbff;
+      transition: 400ms; }
+      .project-box .show-box .icon-border:hover {
+        transform: rotate(180deg);
+        border-left: 1px solid #989da1;
+        border-right: 1px solid #989da1; }
+        .project-box .show-box .icon-border:hover .icon {
+          transform: rotate(-180deg);
+          background-color: #05fbff; }
+      .project-box .show-box .icon-border:first-child:nth-last-child(2) {
+        margin-right: 28px; }
+      .project-box .show-box .icon-border.octo .icon {
+        mask: url("../../images/svg/octoface.svg") no-repeat 50% 50%;
+        -webkit-mask: url("../../images/svg/octoface.svg") no-repeat;
+        mask-size: cover; }
+      .project-box .show-box .icon-border.link .icon {
+        mask: url("../../images/svg/link.svg") no-repeat 50% 50%;
+        -webkit-mask: url("../../images/svg/link.svg") no-repeat;
+        mask-size: cover; }
+      .project-box .show-box .icon-border .icon {
+        width: 36px;
+        height: 36px;
+        mask-size: cover;
+        transition: 400ms;
+        background-color: #989da1; }
+
+.icon-border.dash {
+  cursor: pointer;
+  width: 20%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: 400ms; }
+  .icon-border.dash .icon {
+    transition: 400ms;
+    width: 70%;
+    height: 3px;
+    mask-size: cover;
+    background-color: #989da1; }

@@ -1,0 +1,28 @@
+.simple-background-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1; }
+  .simple-background-wrapper .background {
+    height: 105%;
+    width: 105%;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -2;
+    transition: 500ms; }
+  .simple-background-wrapper .shade {
+    transition: 500ms;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1; }
+  .simple-background-wrapper.active .background {
+    height: 100%;
+    width: 100%;
+    filter: blur(10px); }

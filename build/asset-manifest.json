@@ -1,21 +1,22 @@
 {
-  "main.css": "/build/static/css/main.6e2753d4.chunk.css",
-  "main.js": "/build/static/js/main.cc83270d.chunk.js",
-  "main.js.map": "/build/static/js/main.cc83270d.chunk.js.map",
-  "runtime~main.js": "/build/static/js/runtime~main.9df7376b.js",
-  "runtime~main.js.map": "/build/static/js/runtime~main.9df7376b.js.map",
-  "static/js/2.65293565.chunk.js": "/build/static/js/2.65293565.chunk.js",
-  "static/js/2.65293565.chunk.js.map": "/build/static/js/2.65293565.chunk.js.map",
-  "index.html": "/build/index.html",
-  "precache-manifest.e065c6f0694866579e887c102bcb3453.js": "/build/precache-manifest.e065c6f0694866579e887c102bcb3453.js",
-  "service-worker.js": "/build/service-worker.js",
-  "static/css/main.6e2753d4.chunk.css.map": "/build/static/css/main.6e2753d4.chunk.css.map",
-  "static/media/Facebook_simple_icon.svg": "/build/static/media/Facebook_simple_icon.0b05b4f7.svg",
-  "static/media/Github_simple_icon.svg": "/build/static/media/Github_simple_icon.3eda32ad.svg",
-  "static/media/Instagram_simple_icon.svg": "/build/static/media/Instagram_simple_icon.c9358d1c.svg",
-  "static/media/LinkedIn_simple_icon.svg": "/build/static/media/LinkedIn_simple_icon.f0035cef.svg",
-  "static/media/Chevron-Button.css": "/build/static/media/chevron-down.3bcf0dee.svg",
-  "static/media/ProjectBox.css": "/build/static/media/octoface.c57b2498.svg",
-  "static/media/space.jpg": "/build/static/media/space.80ddc2a3.jpg",
-  "static/media/twitter.svg": "/build/static/media/twitter.43449f1c.svg"
+  "files": {
+    "main.css": "/build/static/css/main.5d6857e6.css",
+    "main.js": "/build/static/js/main.2a8ed3b9.js",
+    "static/media/space.jpg": "/build/static/media/space.7d8ae613ce3534b07ab5.jpg",
+    "static/media/Github_simple_icon.svg": "/build/static/media/Github_simple_icon.ac46c694fccf38e28b28f4757d1415b0.svg",
+    "static/media/Instagram_simple_icon.svg": "/build/static/media/Instagram_simple_icon.f2123cd78ed54cf8d26a4452439a8157.svg",
+    "index.html": "/build/index.html",
+    "static/media/octoface.svg": "/build/static/media/octoface.173a153bcc3d45299d6d.svg",
+    "static/media/Facebook_simple_icon.svg": "/build/static/media/Facebook_simple_icon.a44efb48b0eae792691eeee1fb5312dd.svg",
+    "static/media/LinkedIn_simple_icon.svg": "/build/static/media/LinkedIn_simple_icon.c7a09d403dfd3302d42fdbb353e338c3.svg",
+    "static/media/link.svg": "/build/static/media/link.c1a14780b4775fa927c8.svg",
+    "static/media/chevron-down.svg": "/build/static/media/chevron-down.cdbce622f1b63aafe452.svg",
+    "static/media/twitter.svg": "/build/static/media/twitter.410a9d14144a810542330f7d951ff2cf.svg",
+    "main.5d6857e6.css.map": "/build/static/css/main.5d6857e6.css.map",
+    "main.2a8ed3b9.js.map": "/build/static/js/main.2a8ed3b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d6857e6.css",
+    "static/js/main.2a8ed3b9.js"
+  ]
 }

@@ -1,0 +1,22 @@
+.simple-container .project-boxes {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap; }
+  @media (min-width: 768px) {
+    .simple-container .project-boxes .project-box:nth-child(2n+1) {
+      margin-right: 6%; } }
+
+.simple-container .container-footer {
+  text-align: center;
+  box-sizing: border-box; }
+  .simple-container .container-footer .language-search-bar {
+    display: flex;
+    justify-content: center; }
+
+.language-link-text {
+  display: inline-block;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: -10000000pxpx;
+  width: 1px; }

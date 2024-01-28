@@ -1,0 +1,6 @@
+footer {
+  font-weight: 100;
+  margin-bottom: 3px;
+  font-size: .85rem; }
+  footer a {
+    transition: 400ms; }

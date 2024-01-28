@@ -1,0 +1,74 @@
+.language-circle {
+  border-radius: 100%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+  position: relative; }
+  .language-circle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    color: #989da1;
+    text-align: center;
+    padding: 5px 7px;
+    bottom: calc(100% + 10px); }
+  .language-circle::after {
+    visibility: hidden;
+    content: "";
+    position: absolute;
+    display: block;
+    left: calc(50% - 5px);
+    bottom: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.3) transparent transparent transparent; }
+  .language-circle:hover::after, .language-circle:hover::before {
+    visibility: visible; }
+  .language-circle.All {
+    background-color: #989da1;
+    order: 1; }
+    .language-circle.All::before {
+      content: "All"; }
+  .language-circle.Java {
+    background-color: #b07219;
+    order: 8; }
+    .language-circle.Java::before {
+      content: "Java"; }
+  .language-circle.Shell {
+    background-color: #89e051;
+    order: 3; }
+    .language-circle.Shell::before {
+      content: "Shell"; }
+  .language-circle.Python {
+    background-color: #3572A5;
+    order: 4; }
+    .language-circle.Python::before {
+      content: "Python"; }
+  .language-circle.JavaScript {
+    background-color: #f1e05a;
+    order: 2; }
+    .language-circle.JavaScript::before {
+      content: "JavaScript"; }
+  .language-circle.HTML {
+    background-color: #e34c26;
+    order: 7; }
+    .language-circle.HTML::before {
+      content: "HTML"; }
+  .language-circle.CSS {
+    background-color: #563d7c;
+    order: 6; }
+    .language-circle.CSS::before {
+      content: "CSS"; }
+  .language-circle.CoffeeScript {
+    background-color: #244776;
+    order: 5; }
+    .language-circle.CoffeeScript::before {
+      content: "CoffeeScript"; }
+  .language-circle.TypeScript {
+    background-color: #3178c6;
+    order: 1; }
+    .language-circle.TypeScript::before {
+      content: "TypeScript"; }
