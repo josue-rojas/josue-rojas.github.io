@@ -1,9 +1,81 @@
 const ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
+// Set true to ignore REPO_ALLOW_LIST
+const ALLOW_ALL_REPOS = true;
 const REPO_ALLOW_LIST = [
   'advent-calendar',
+  'Altruist',
+  'Asteroid',
+  'BrowserRefresh',
+  'Bulletin-Board',
+  'circle-zindex-example',
+  'clock',
+  'Color-Map',
+  'csv-yaml',
+  'DataAllocation',
+  'dots',
+  'Dream-Defer-Timer',
+  'ebay-notifier',
+  'embed-googleform-react',
+  'export-jekyll',
+  'fav-quotes',
+  'for-irene',
+  'form-gallery',
+  'Gatsby-Notebook',
+  'GreyAlienResearch',
+  'holidays-2020',
+  'I-send-you-email-front',
+  'I-send-you-email-server',
+  'idk',
+  'JukeBox',
+  'little-library-message-board',
+  'Lores27',
+  'md-editor',
+  'Migration-of-Language-and-Income',
+  'Modulos-Design',
+  'Natalies-Portfolio',
+  'newly-listed-ebay',
+  'newly-listed-ebay-webapp',
+  'oxford-dictionaries-api',
+  'react-loading',
+  'Revenge',
+  'Simon',
+  'SinglePageDevRefresh',
+  'Stars-React',
+  'Stock-Mining',
+  'Suggestions',
+  'SunMoonReact',
+  'timesince',
+  'triangle-poster',
+  'Unknown-Timers',
+  'unsent-project-clone',
+  'UploadtoImgr-googleForm',
+  'wall_art',
+  'wordsidontknow',
 ];
+const PINNED_REPOS = [
+  'unsent-project-clone',
+  'GreyAlienResearch',
+  'ebay-notifier',
+  'wordsidontknow',
+  'survivalkits',
+  'azul-rojo.github.io',
+]
+const SUPPORTED_LANGUAGES = [
+  "All",
+  "TypeScript",
+  "CSS",
+  "HTML",
+  "Java",
+  "JavaScript",
+  "Python",
+  "CoffeeScript",
+  // Not supported cause the search does not work for these
+  // "SCSS",
+  // "Shell"
+  // "Sass"
+]
 const IS_PRODUCTION = true;
-const DEFAULT_USER = 'josue-rojas';
+const DEFAULT_USERS = ['josue-rojas', 'azul-rojo'];
 
 const USER_REPOS_API_URL = (user) => `https://api.github.com/users/${user}/repos?per_page=100`;
 const REPOS_LANGUAGE_API_URL = (user, repoName) => `https://api.github.com/repos/${user}/${repoName}/languages`;
@@ -37,8 +109,16 @@ async function getRepoLanguage (user, repoName) {
 }
 
 async function main () {
+  // defaults
+  const data = {
+    username: DEFAULT_USERS[0],
+    languages: ['All'],
+    avatar: '',
+    repos: [],
+  }
   // First we get all the repos
-  const reposRaw = await getRepos(DEFAULT_USER);
+  const allReposPromise = await Promise.all(DEFAULT_USERS.map(u => getRepos(u)));
+  const reposRaw = allReposPromise.reduce((p, c) => [...p, ...c], []);
 
   // then we map the repos with their languages 
   const { repos, languageFetches } = reposRaw.reduce((prevValue, currentValue) => {
@@ -46,7 +126,7 @@ async function main () {
     
     const { repos, languageFetches } = prevValue;
     
-    if (!REPO_ALLOW_LIST.includes(currentValue.name)) return prevValue;
+    if (!ALLOW_ALL_REPOS && !REPO_ALLOW_LIST.includes(currentValue.name)) return prevValue;
 
     const {
       name,
@@ -54,11 +134,11 @@ async function main () {
       html_url,
       description,
       homepage,
-      url,
+      owner,
     } = currentValue;
 
     if (IS_PRODUCTION) {
-      languageFetches.push(async () => await getRepoLanguage(DEFAULT_USER, name));
+      languageFetches.push(async () => await getRepoLanguage(owner.login, name));
     } else {
       // only push one if dev as to not run out of credits
       !languageFetches.length && languageFetches.push(async () => await getRepoLanguage(DEFAULT_USER, name));
@@ -86,16 +166,20 @@ async function main () {
     const repoLanguageList = Object.keys(repoLanguages);
     
     repoLanguageList.forEach((l) => languagesSet.add(l));
-    repos[repoName].languagesList = repoLanguageList;
-    repos[repoName].languages = repoLanguages;
+    repos[repoName].languagesList = repoLanguageList.filter(l => SUPPORTED_LANGUAGES.includes(l));
   }))
 
-  const data = {
-    username: DEFAULT_USER,
-    languages: ['All', ...Array.from(languagesSet)],
-    avatar: '',
-    repos: Object.values(repos),
-  }
+  const allLanaguagesArr = Array.from(languagesSet).filter(l => SUPPORTED_LANGUAGES.includes(l));
+  const reposList = Object.values(repos);
+
+  data.languages = [...data.languages, ...allLanaguagesArr];
+  data.repos = reposList.filter(r => PINNED_REPOS.includes(r.name));
+  data.links = reposList.reduce((p, c) => {
+    if (c.html_url) p.push(c.html_url);
+    if (c.homepage) p.push(c.homepage);
+
+    return p
+  }, [])
 
   console.log(JSON.stringify(data))
 

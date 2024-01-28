@@ -67,3 +67,8 @@
     order: 5; }
     .language-circle.CoffeeScript::before {
       content: "CoffeeScript"; }
+  .language-circle.TypeScript {
+    background-color: #3178c6;
+    order: 1; }
+    .language-circle.TypeScript::before {
+      content: "TypeScript"; }
