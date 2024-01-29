@@ -1,6 +1,4 @@
 - research designs
-- change build to be GitHub pages 
 - https://github.com/josue-rojas/josue-rojas.github.io/blob/a37fbe82640b7941e59f34b87ce8d8e5eca087c3/src/components/simple-footer.js#L23 - this should be a constant 
 - Change css to scss
 - Change classes to functional components
-- clean data script

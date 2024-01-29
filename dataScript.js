@@ -74,7 +74,7 @@ const SUPPORTED_LANGUAGES = [
   // "Shell"
   // "Sass"
 ]
-const IS_PRODUCTION = true;
+// const IS_PRODUCTION = true;
 const DEFAULT_USERS = ['josue-rojas', 'azul-rojo'];
 
 const USER_REPOS_API_URL = (user) => `https://api.github.com/users/${user}/repos?per_page=100`;
@@ -120,43 +120,31 @@ async function main () {
   const allReposPromise = await Promise.all(DEFAULT_USERS.map(u => getRepos(u)));
   const reposRaw = allReposPromise.reduce((p, c) => [...p, ...c], []);
 
+  // create a map of languages fetches
+  const languagesResponse = await Promise.all(reposRaw.map((async r => {
+    const { name, owner } = r;
+
+    return await getRepoLanguage(owner.login, name);
+  })))
+
   // then we map the repos with their languages 
-  const { repos, languageFetches } = reposRaw.reduce((prevValue, currentValue) => {
-    if (currentValue.visibility !== 'public') return prevValue;
+  const repos = reposRaw.reduce((repos, currentRepo) => {
+    if (currentRepo.visibility !== 'public') return prevValue;
     
-    const { repos, languageFetches } = prevValue;
-    
-    if (!ALLOW_ALL_REPOS && !REPO_ALLOW_LIST.includes(currentValue.name)) return prevValue;
+    if (!ALLOW_ALL_REPOS && !REPO_ALLOW_LIST.includes(currentRepo.name)) return prevValue;
 
-    const {
-      name,
-      created_at,
-      html_url,
-      description,
-      homepage,
-      owner,
-    } = currentValue;
+    const currRepoName = currentRepo.name;
 
-    if (IS_PRODUCTION) {
-      languageFetches.push(async () => await getRepoLanguage(owner.login, name));
-    } else {
-      // only push one if dev as to not run out of credits
-      !languageFetches.length && languageFetches.push(async () => await getRepoLanguage(DEFAULT_USER, name));
+    repos[currRepoName] = {
+      name: currRepoName,
+      html_url: currentRepo.html_url,
+      created_at: currentRepo.created_at,
+      description: currentRepo.description,
+      homepage: currentRepo.homepage,
     }
 
-    repos[name] = {
-      name,
-      html_url,
-      created_at,
-      description,
-      homepage,
-    }
-
-    return { repos, languageFetches };
-  }, { repos: {}, languageFetches: [] })
-
-
-  const languagesResponse = await Promise.all(languageFetches.map(func => func()))
+    return repos;
+  }, {})
 
   // merge to languages
   const languagesSet = new Set([]);
