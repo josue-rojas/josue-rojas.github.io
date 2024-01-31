@@ -161,7 +161,8 @@ async function main () {
   const reposList = Object.values(repos);
 
   data.languages = [...data.languages, ...allLanaguagesArr];
-  data.repos = reposList.filter(r => PINNED_REPOS.includes(r.name));
+  data.repos = reposList.filter(r => PINNED_REPOS.includes(r.name))
+    .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
   data.links = reposList.reduce((p, c) => {
     if (c.html_url) p.push(c.html_url);
     if (c.homepage) p.push(c.homepage);
