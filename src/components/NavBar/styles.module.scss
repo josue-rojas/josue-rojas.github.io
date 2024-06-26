@@ -1,0 +1,36 @@
+.navbar {
+  text-align: center;
+  margin: auto auto 30px auto;
+}
+
+.titleWrapper {
+  margin-bottom: 15px;
+}
+
+.title {
+  line-height: 4rem;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.links {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.link:not(:last-child):after {
+  content: "";
+  background-color: black;
+  border-radius: 100%;
+  display: inline-block;
+  height: .3rem;
+  margin: 0 15px;
+  width: .3rem;
+}
