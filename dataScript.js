@@ -60,6 +60,12 @@ const PINNED_REPOS = [
   'wordsidontknow',
   'survivalkits',
   'azulrojo.com',
+  'dots',
+  'triangle-poster',
+  'valentines',
+  'advent-calendar',
+  'wall_art',
+  'Stars-React'
 ]
 const SUPPORTED_LANGUAGES = [
   "All",

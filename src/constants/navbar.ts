@@ -1,14 +1,14 @@
 export const NAVBAR_LINKS = [
   {
     text: 'Resume',
-    href: '#resume',
-  },
-  {
-    text: 'Projects',
-    href: '#projects',
+    href: `https://docs.google.com/viewerng/viewer?url=${window.location.host}/resume.pdf`,
   },
   {
     text: 'About',
-    href: '#about'
-  }
+    href: '/#about'
+  },
+  {
+    text: 'Projects',
+    href: '/#projects',
+  },
 ]
