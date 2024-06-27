@@ -1,5 +1,6 @@
 import { Link } from '../components/Link';
 import { GITHUB_PROFILE } from '../constants/profile';
+
 export function Home() {
   return (
     <div>

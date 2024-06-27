@@ -1,3 +1,9 @@
-.link:visited {
-  color: rgb(0, 0, 238);
+.link {
+  &:visited {
+    color: rgb(0, 0, 238);
+  }
+
+  &:active {
+    color: rgb(255, 0, 0);
+  }
 }

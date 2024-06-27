@@ -1,3 +1,4 @@
+import { Link } from '../Link';
 import styles from './styles.module.scss';
 
 interface NavBarProps {
@@ -16,7 +17,7 @@ export function NavBar(props: NavBarProps) {
           <h1 key={word} className={styles.title}>{word}</h1>)}
       </div>
       <div className={styles.links}>
-        {props.links.map((link) => <a key={link.href} className={styles.link} href={link.href}>{ link.text }</a>)}
+        {props.links.map((link) => <Link key={link.href} className={styles.link} href={link.href}>{ link.text }</Link>)}
       </div>
     </nav>
   );
