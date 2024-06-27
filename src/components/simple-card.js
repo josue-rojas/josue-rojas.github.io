@@ -59,7 +59,7 @@ export default class SimpleCard extends Component {
     const links = {
       // About: "/#about",
       Projects: "/#projects",
-      Resume: `https://docs.google.com/viewerng/viewer?url=${window.location.host}/resume.pdf`,
+      Resume: `${window.location.host}/resume.pdf`,
       Random: "/#random",
     };
     return (

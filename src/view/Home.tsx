@@ -5,7 +5,7 @@ export function Home() {
     <div>
       <h1>Howdy! Hi! 🤠</h1>
       <p>
-      I am Josue, an experience software engineer with focus on Typescript, NodeJS, GCP, AWS, and React. I am passionate about learning and am always curious to learn new things! I love challenges and always try to upskill by working on side projects that incorporate what I know and what I could learn. My <Link href={GITHUB_PROFILE}>GitHub</Link> is full of these side projects, check it out!
+      I am Josue, an experience software engineer with focus on Typescript, NodeJS, GCP, AWS, and React. I am passionate about learning and always curious to learn new things! I love challenges and always try to upskill by working on side projects that incorporate what I know and what I could learn. My <Link href={GITHUB_PROFILE}>GitHub</Link> is full of these side projects, check it out!
       </p>
 
       <h1>Front End</h1>
@@ -30,11 +30,11 @@ export function Home() {
 
       <h1>Hobbies</h1>
       <p>
-      👨‍💻I have many hobbies just cause I have an interest in learning as much as I can. I enjoy creating things like artsy website (like this <Link href="https://www.withcheesepls.com/triangle-poster/">sleek triangle</Link>). I recently have been messing with a raspberry pi to create <Link href="https://github.com/josue-rojas/live-locket">‘Live-Locket’</Link>.
+      👨‍💻I have many hobbies just cause I have an interest in learning as much as I can. I enjoy creating things like artsy websites, like this <Link href="https://www.withcheesepls.com/triangle-poster/">sleek triangle</Link>. I recently have been learning more about hardware and python with a raspberry pi to create <Link href="https://github.com/josue-rojas/live-locket">‘Live-Locket’</Link>.
       <br></br>
       ⛰️Oh I also like being outside. I’ve been on a total of 2 hikes, hoping to do more. I love to travel even if it’s just New York State, it’s bigger than I thought. I’ve gotten to explore some towns that have great people, great stories, and great stores for shopping. 
       <br></br>
-      ✈️ Besides traveling, I also like diners. One of my first jobs was at a diner so it has a special place.My goal is to take a road trip while visiting the most diners I can. 
+      ✈️ Besides traveling, I also like diners. One of my first jobs was at a diner so it has a special place. My goal is to take a road trip while visiting the most diners I can. 
       <br></br>
       📸 I also picked up photography. I enjoy using film to get that nostalgic feel. I also shoot on a fuji camera for that continued nostalgia. (I secretly collect cameras…)
       </p>
