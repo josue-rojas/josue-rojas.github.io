@@ -22,7 +22,7 @@ export function Home() {
     
       <h1>Work Experience</h1>
       <p>
-        I've previously worked in at MikMak where I had the pleasure of learning about startups. I also got to be a part of the growth phase, meeting new people and always trying to innovate to get ahead of the competition was very fun. I've learn so many things during my time there, I got to work as a lead in a few projects and also I picked up new tools like GCP pub/subs and AWS cloud formation for easy infrastructure management. 
+        I've previously worked at MikMak where I had the pleasure of learning about startups. I got to be a part of the growth phase, meeting new people and always trying to innovate to get ahead of the competition, it was very fun. I've learn so many things during my time there, I got to work as a lead in a few projects and also I picked up new tools like GCP pub/subs and AWS cloud formation for easy infrastructure management. 
       </p>
       <p>
       At Accenture I experience the fast pace of consulting. Working with many clients gave the chance to learn really quickly different technologies such as React, Angular, Typescript, Azure, MySQL, and many more.
@@ -36,7 +36,7 @@ export function Home() {
       <br></br>
       ✈️ Besides traveling, I also like diners. One of my first jobs was at a diner so it has a special place.My goal is to take a road trip while visiting the most diners I can. 
       <br></br>
-      📸 I also picked up photography. I enjoy using film to get that nostalgic feel. I also use a fuji camera for that continued nostalgia. (I secretly collect cameras…)
+      📸 I also picked up photography. I enjoy using film to get that nostalgic feel. I also shoot on a fuji camera for that continued nostalgia. (I secretly collect cameras…)
       </p>
   </div>)
 }
