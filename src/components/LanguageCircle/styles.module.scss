@@ -9,9 +9,9 @@
     content: "";
     display: block;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(130, 130, 130, 0.96);
     visibility: hidden;
-    color: #989da1;
+    // color: #989da1; // TODO: change color and styling
     text-align: center;
     padding: 5px 7px;
     bottom: calc(100% + 10px); }
@@ -24,7 +24,7 @@
     bottom: 100%;
     border-width: 5px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.3) transparent transparent transparent; }
+    border-color:rgba(130, 130, 130, 0.96) transparent transparent transparent; }
   .language-circle:hover::after, .language-circle:hover::before {
     visibility: visible; }
   .language-circle.All {

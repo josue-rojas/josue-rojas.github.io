@@ -1,0 +1,27 @@
+@import '../../mixins.scss';
+
+.title {
+  font-size: 1rem;
+  line-height: .7rem;
+}
+
+.description {
+  color: rgb(112, 112, 112);
+  font-size: .95rem;
+  margin-bottom: 15px;
+}
+
+.linkWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: fit-content;
+
+  @include medium-devices {
+    // max-width: none;
+  }
+}
+
+.time {
+  font-size: .8rem;
+  color: rgb(129, 129, 129);
+}

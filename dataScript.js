@@ -1,4 +1,5 @@
 const ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
+console.log('acc', ACCESS_TOKEN)
 // Set true to ignore REPO_ALLOW_LIST
 const ALLOW_ALL_REPOS = true;
 const REPO_ALLOW_LIST = [
@@ -58,7 +59,13 @@ const PINNED_REPOS = [
   'ebay-notifier',
   'wordsidontknow',
   'survivalkits',
-  'azul-rojo.github.io',
+  'azulrojo.com',
+  'dots',
+  'triangle-poster',
+  'valentines',
+  'advent-calendar',
+  'wall_art',
+  'Stars-React'
 ]
 const SUPPORTED_LANGUAGES = [
   "All",
@@ -118,6 +125,7 @@ async function main () {
   }
   // First we get all the repos
   const allReposPromise = await Promise.all(DEFAULT_USERS.map(u => getRepos(u)));
+  console.log('allReposPromise', allReposPromise)
   const reposRaw = allReposPromise.reduce((p, c) => [...p, ...c], []);
 
   // create a map of languages fetches

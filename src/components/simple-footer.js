@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import "../styles/sass/simple-footer.css";
+import { GITHUB_PROFILE_SOURCE } from "../constants/profile";
 
 export default class SimpleFooter extends Component {
   constructor(props) {
@@ -17,14 +18,14 @@ export default class SimpleFooter extends Component {
       ? this.props.hover_color
       : this.props.main_color;
     return (
-      <footer>
+      <footer style={{textAlign: 'center'}}>
         <a
           style={{ color: color }}
-          href="https://github.com/josue-rojas/josue-rojas.github.io"
+          href={GITHUB_PROFILE_SOURCE}
           onMouseEnter={() => this.toggleHover(true)}
           onMouseLeave={() => this.toggleHover(false)}
         >
-          Source Here
+          Source
         </a>
       </footer>
     );

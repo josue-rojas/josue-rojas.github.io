@@ -1,0 +1,14 @@
+.button {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: .95rem,;
+  padding: 5px 15px;
+  transition: background-color 200ms;
+  width: max-content;
+
+  &:hover {
+    background-color: rgb(46, 46, 46);
+  }
+}

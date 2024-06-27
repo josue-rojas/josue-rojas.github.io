@@ -1,0 +1,16 @@
+@import '../../mixins.scss';
+
+.layout {
+  margin: auto;
+  padding: 15px;
+
+
+  @include medium-devices {
+    max-width: 750px;
+    padding: 20px;
+  }
+
+  @include large-devices {
+    max-width: 1000px;
+  }
+}
