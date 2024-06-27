@@ -45,8 +45,6 @@ class App extends Component {
   // sort of handle the routes (views)
   getView(page) {
     switch (page) {
-      case "#home": 
-        return <Home />
       case "#about":
         return <AboutPage />;
       case "#projects":
@@ -58,22 +56,7 @@ class App extends Component {
           random_links[Math.floor(Math.random() * random_links.length)];
       // fall through
       default:
-        return (
-          <SimpleCard
-            social={{
-              Github: GITHUB_PROFILE,
-              LinkedIn: LINKEDIN_URL,
-              Twitter: TWITTER_URL,
-              Instagram: INSTAGRAM_URL,
-              Facebook: FACEBOOK_URL,
-            }}
-            hover_color="#05fbff"
-            main_color="#989DA1"
-            profile_image="https://avatars0.githubusercontent.com/u/10749061"
-            title={NAME}
-            sub_title="Software Engineer / Wonderer"
-          />
-        );
+        return <Home />
     }
   }
 

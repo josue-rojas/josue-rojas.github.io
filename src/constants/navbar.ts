@@ -5,7 +5,7 @@ export const NAVBAR_LINKS = [
   },
   {
     text: 'About',
-    href: '/#about'
+    href: '/'
   },
   {
     text: 'Projects',
