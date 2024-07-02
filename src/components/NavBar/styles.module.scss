@@ -1,6 +1,6 @@
 .navbar {
   text-align: center;
-  margin: auto auto 30px auto;
+  margin: auto auto 30px auto; 
 }
 
 .titleWrapper {
@@ -9,8 +9,12 @@
 
 .title {
   line-height: 4rem;
-  font-size: 4rem;
+  font-size: 4.2rem;
   margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  // font-weight: 800;
+  font-style: normal; 
 }
 
 .links {
