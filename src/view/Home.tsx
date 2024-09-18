@@ -18,7 +18,7 @@ export function Home() {
 
       <h1>Backend</h1>
       <p>
-      For backend I like to use typescript and node. I love exploring other technologies too, like firebase, supabase, and other new stuff that comes up. Sometimes I have an idea that goes from planning to reality, tools like supabase has allowed me to create these ideas quickly and cheaply (<Link href='https://github.com/azul-rojo/sticker-guide'>Sticker Guide</Link>). In my work experience I have used other services such as GCP and AWS. Some cool things build was creating a data pipeline using pub/subs and cloud functions. 
+      For backend I like to use typescript and node. I love exploring other technologies too, like firebase, supabase, and other new stuff that comes up. Sometimes I have an idea that goes from planning to reality, tools like supabase has allowed me to create these ideas quickly and cheaply. In my work experience I have used other services such as GCP and AWS. Some cool things build was creating a data pipeline using pub/subs and cloud functions. 
       </p>
     
       <h1>Work Experience</h1>
